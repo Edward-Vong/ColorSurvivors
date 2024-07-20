@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://b42qgimyc5nb"]
+
+[ext_resource type="PackedScene" uid="uid://b1saonsad03et" path="res://SpriteNodes/terrain/tempFloor.tscn" id="1_mtyu7"]
+[ext_resource type="PackedScene" uid="uid://bqohp4x1rq73y" path="res://SpriteNodes/character/dot.tscn" id="2_kcibr"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Polygon2D" parent="." instance=ExtResource("1_mtyu7")]
+position = Vector2(-1, -4)
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_kcibr")]
+position = Vector2(45, 35)
+scale = Vector2(0.205, 0.205)

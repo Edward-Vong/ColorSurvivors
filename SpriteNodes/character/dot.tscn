@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bqohp4x1rq73y"]
+
+[ext_resource type="Script" path="res://SpriteNodes/character/scripts/dot.gd" id="1_8hn18"]
+[ext_resource type="Texture2D" uid="uid://ctwc6om5w5ec1" path="res://ArtAssets/dot.png" id="1_t6bfp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8pvxl"]
+radius = 138.004
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_8hn18")
+
+[node name="Dot" type="Sprite2D" parent="."]
+position = Vector2(275, 150)
+texture = ExtResource("1_t6bfp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(225, 142)
+shape = SubResource("CircleShape2D_8pvxl")
