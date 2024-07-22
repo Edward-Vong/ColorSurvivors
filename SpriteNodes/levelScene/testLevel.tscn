@@ -1,16 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://b42qgimyc5nb"]
+[gd_scene load_steps=4 format=3 uid="uid://b42qgimyc5nb"]
 
-[ext_resource type="PackedScene" uid="uid://b1saonsad03et" path="res://SpriteNodes/terrain/tempFloor.tscn" id="1_mtyu7"]
+[ext_resource type="PackedScene" uid="uid://dymgtwlclolia" path="res://SpriteNodes/terrain/TileMaps/tempDungeon.tscn" id="1_0qlxy"]
+[ext_resource type="Script" path="res://SpriteNodes/levelScene/followCam.gd" id="2_5m0lf"]
 [ext_resource type="PackedScene" uid="uid://bqohp4x1rq73y" path="res://SpriteNodes/character/dot.tscn" id="2_kcibr"]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Polygon2D" parent="." instance=ExtResource("1_mtyu7")]
-position = Vector2(-1, -4)
+[node name="tempDungeon" parent="." instance=ExtResource("1_0qlxy")]
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_kcibr")]
 position = Vector2(55, 37)
 scale = Vector2(0.205, 0.205)
 
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
-scale = Vector2(0.996383, 1)
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" node_paths=PackedStringArray("tilemap")]
+scale = Vector2(0.757882, 1.451)
+limit_left = 0
+limit_top = 0
+script = ExtResource("2_5m0lf")
+tilemap = NodePath("../../tempDungeon")
