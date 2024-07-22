@@ -8,8 +8,3 @@ func _ready():
 	var pixel_world_size = map_rect.size * tile_size
 	limit_right = pixel_world_size.x
 	limit_bottom = pixel_world_size.y
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
