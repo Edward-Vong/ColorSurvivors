@@ -9,5 +9,7 @@
 position = Vector2(-1, -4)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_kcibr")]
-position = Vector2(45, 35)
+position = Vector2(55, 37)
 scale = Vector2(0.205, 0.205)
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
